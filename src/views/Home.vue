@@ -1,18 +1,109 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <span class="title">Witaj! ^_^</span><br>
+    <span class="title">Co dzisiaj robimy?</span>
+
+    <v-col class="col">
+      <v-row class="row">
+        <v-btn
+          class="btn" 
+          x-large
+          to="kanji"
+          color="primary">
+          <v-icon
+            medium
+            class="icn"
+            color="white">
+            mdi-ideogram-cjk
+          </v-icon>
+          Kanji
+        </v-btn>
+        <v-btn 
+          class="btn" 
+          x-large
+          to="classifiers"
+          color="primary">
+          <v-icon
+            medium
+            class="icn"
+            color="white">
+            mdi-numeric
+          </v-icon>
+          Klasyfikatory
+        </v-btn>
+      </v-row>
+      <v-row>
+        <v-btn
+          class="btn" 
+          x-large
+          to="dictionary"
+          color="primary">
+          <v-icon
+            medium
+            class="icn"
+            color="white">
+            mdi-bookshelf
+          </v-icon>
+          Słowniczek
+        </v-btn>
+        <v-btn 
+          class="btn" 
+          x-large
+          to="tests"
+          color="primary">
+          <v-icon
+            medium
+            class="icn"
+            color="white">
+            mdi-file-edit
+          </v-icon>
+          Testy
+        </v-btn>
+      </v-row>
+    </v-col>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+  },
+  methods: {
+    toggle() {
+      alert(0);
+    }
   }
 }
 </script>
+
+<style lang="scss">
+.home {
+  margin-top: 1rem;
+}
+.col {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  margin-top: 1rem;
+}
+.row {
+  height: 100%;
+}
+.btn {
+  width: 40%;
+  margin: auto;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 980px) {
+	.btn {
+    width: 100%;
+    margin: auto;
+    margin-top: 1rem;
+  }
+}
+.icn {
+  margin-right: 0.5rem;;
+}
+</style>

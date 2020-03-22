@@ -1,0 +1,13 @@
+<template>
+  <div>
+    <h1>
+      <v-icon
+        large
+        class="icn"
+        color="black">
+        mdi-ideogram-cjk
+      </v-icon>
+      Kanji
+    </h1>
+  </div>
+</template>
