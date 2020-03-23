@@ -94,7 +94,7 @@ export default {
   margin-top: 2rem;
   width: 75%;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 720px) {
 	.app_content {
 	  width: 90% !important;
   }

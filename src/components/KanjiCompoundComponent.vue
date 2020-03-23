@@ -1,18 +1,17 @@
 <template>
   <v-container>
-    
-    {{dictionary2[0][0].key}}
+    TODO: implement...
   </v-container>
 </template>
 
 <script>
-import { dictionary } from "../data/dictionary";
+import { kanji } from "../data/kanji";
 
 export default {
-  name: 'HelloWorld',
+  name: 'KanjiCompoundsComponent',
 
   data: () => ({
-    dictionary2: dictionary
+    
   }),
   mounted() {
   }

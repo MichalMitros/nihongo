@@ -9,29 +9,52 @@
       </v-icon>
       Kanji
     </h1>
-    <v-btn 
-      class="categories" 
-      large
-      to="range"
-      color="primary">
-      <v-icon class="icn">mdi-cog-outline</v-icon>
-      &nbsp;Zakres
-    </v-btn>
     <v-col class="col">
       <v-row class="row">
         <v-btn
           class="btn" 
           x-large
+          @click=" showKanji = true; showCompound = false; $vuetify.goTo('#components', {duration: 750})"
           color="primary">
           Lista kanji
         </v-btn>
         <v-btn 
           class="btn" 
           x-large
+          @click=" showKanji = false; showCompound = true; $vuetify.goTo('#components', {duration: 750})"
           color="primary">
           Złożenia
         </v-btn>
       </v-row>
     </v-col>
+    <div id="components">
+      <KanjiComponent v-if="showKanji"></KanjiComponent>
+      <KanjiCompoundComponent v-if="showCompound"></KanjiCompoundComponent>
+    </div>
   </div>
 </template>
+
+<script>
+import KanjiComponent from "../components/KanjiComponent";
+import KanjiCompoundComponent from "../components/KanjiCompoundComponent";
+
+export default {
+  name: 'Kanji',
+  components: {
+    KanjiComponent,
+    KanjiCompoundComponent
+  },
+  data: () => ({
+    showKanji: false,
+    showCompound: false
+  }),
+  methods: {
+  }
+}
+</script>
+
+<style lang="scss">
+#components {
+  margin-top: 2rem;
+}
+</style>

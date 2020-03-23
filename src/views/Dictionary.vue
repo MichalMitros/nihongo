@@ -72,13 +72,11 @@
 </template>
 
 <script>
-import DictionaryComponent from "../components/DictionaryComponent";
 import { dictionary } from "../data/dictionary";
 
 export default {
   name: 'Dictionary',
   components: {
-    DictionaryComponent
   },
   data: () => ({
     searchedSentence: "",

@@ -6,6 +6,7 @@ import Classifiers from '../views/Classifiers.vue'
 import Dictionary from '../views/Dictionary.vue'
 import Tests from '../views/Tests.vue'
 import Categories from '../views/Categories.vue'
+import Range from '../views/Range.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/categories',
     name: 'Categories',
     component: Categories
+  },
+  {
+    path: '/range',
+    name: 'Range',
+    component: Range
   }
 ]
 

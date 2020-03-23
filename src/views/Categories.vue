@@ -2,7 +2,7 @@
   <div>
     <v-btn large color="black" text to="/dictionary" class="mb-4">
         <v-icon color="black">mdi-arrow-left</v-icon>
-        powrót
+        Powrót
     </v-btn>
     <h2>
         Kategorie:
