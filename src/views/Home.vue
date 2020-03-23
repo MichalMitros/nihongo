@@ -91,7 +91,8 @@ export default {
   margin: auto;
   margin-top: 1rem;
 }
-@media only screen and (max-width: 980px) {
+// 980px
+@media only screen and (max-width: 720px) {
 	.btn {
     width: 100%;
     margin: auto;

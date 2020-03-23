@@ -287,6 +287,18 @@
             </v-simple-table>
         </div>
     </div>
+    <v-btn
+      fixed
+      dark
+      fab
+      bottom
+      right
+      color="pink"
+      v-if="showIndex !== -1"
+      @click="$vuetify.goTo(-9999, {duration: 750})"
+    >
+      <v-icon>mdi-chevron-up</v-icon>
+    </v-btn>
   </div>
 </template>
 

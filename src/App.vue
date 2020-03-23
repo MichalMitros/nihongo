@@ -57,11 +57,13 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>日本語</v-toolbar-title>
+      
     </v-app-bar>
 
     <v-content class="app_content">
       <router-view/>
     </v-content>
+    
     <!-- <v-footer
       color="indigo"
       absolute
@@ -97,5 +99,4 @@ export default {
 	  width: 90% !important;
   }
 }
-
 </style>

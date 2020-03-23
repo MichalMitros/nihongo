@@ -56,86 +56,18 @@
     <div v-if="notFound">
       <h2>Brak wyników.</h2>
     </div>
-    <!-- <v-col class="col">
-      <v-row class="row">
-        <v-btn
-          class="btn" 
-          x-large
-          to="/search_dictionary"
-          color="primary"
-          outlined>
-          <v-icon
-            medium
-            class="icn"
-            color="primary">
-            mdi-magnify
-          </v-icon>
-          Szukaj
-        </v-btn>
-        <v-btn 
-          class="btn" 
-          x-large
-          color="primary">
-          Kategorie
-        </v-btn>
-      </v-row>
-      <v-row>
-        <v-btn
-          class="btn" 
-          x-large
-          color="primary">
-          Czasowniki
-        </v-btn>
-        <v-btn 
-          class="btn" 
-          x-large
-          color="primary">
-          Przymiotniki
-        </v-btn>
-      </v-row>
-      <v-row>
-        <v-btn
-          class="btn" 
-          x-large
-          color="primary">
-          Czas/częstotliwości
-        </v-btn>
-        <v-btn 
-          class="btn" 
-          x-large
-          color="primary">
-          Przysłówki
-        </v-btn>
-      </v-row>
-      <v-row>
-        <v-btn
-          class="btn" 
-          x-large
-          color="primary">
-          Opis położenia
-        </v-btn>
-        <v-btn 
-          class="btn" 
-          x-large
-          color="primary">
-          W sklepie/restauracji
-        </v-btn>
-      </v-row>
-      <v-row>
-        <v-btn
-          class="btn" 
-          x-large
-          color="primary">
-          Dni tygodnia
-        </v-btn>
-        <v-btn 
-          class="btn" 
-          x-large
-          color="primary">
-          Rodzina
-        </v-btn>
-      </v-row>
-    </v-col> -->
+    <v-btn
+      fixed
+      dark
+      fab
+      bottom
+      right
+      color="pink"
+      v-if="!notFound && results.length > 0"
+      @click="$vuetify.goTo(-9999, {duration: 750})"
+    >
+      <v-icon>mdi-chevron-up</v-icon>
+    </v-btn>
   </div>
 </template>
 
