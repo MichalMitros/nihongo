@@ -5,6 +5,7 @@ import Kanji from '../views/Kanji.vue'
 import Classifiers from '../views/Classifiers.vue'
 import Dictionary from '../views/Dictionary.vue'
 import Tests from '../views/Tests.vue'
+import Categories from '../views/Categories.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/tests',
     name: 'Tests',
     component: Tests
+  },
+  {
+    path: '/categories',
+    name: 'Categories',
+    component: Categories
   }
 ]
 

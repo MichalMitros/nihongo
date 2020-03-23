@@ -8,7 +8,7 @@
         <v-btn
           class="btn" 
           x-large
-          to="kanji"
+          to="/kanji"
           color="primary">
           <v-icon
             medium
@@ -21,7 +21,7 @@
         <v-btn 
           class="btn" 
           x-large
-          to="classifiers"
+          to="/classifiers"
           color="primary">
           <v-icon
             medium
@@ -36,7 +36,7 @@
         <v-btn
           class="btn" 
           x-large
-          to="dictionary"
+          to="/dictionary"
           color="primary">
           <v-icon
             medium
@@ -49,7 +49,7 @@
         <v-btn 
           class="btn" 
           x-large
-          to="tests"
+          to="/tests"
           color="primary">
           <v-icon
             medium
@@ -70,11 +70,6 @@ export default {
   name: 'Home',
   components: {
   },
-  methods: {
-    toggle() {
-      alert(0);
-    }
-  }
 }
 </script>
 

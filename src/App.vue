@@ -62,24 +62,22 @@
     <v-content class="app_content">
       <router-view/>
     </v-content>
-    <v-footer
+    <!-- <v-footer
       color="indigo"
       absolute
       app
     >
       <span class="white--text">Copyright &copy; 2020 by Michał Mitros</span>
-    </v-footer>
+    </v-footer> -->
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
   },
 
   data: () => ({
@@ -92,7 +90,7 @@ export default {
 .app_content {
   margin: auto;
   margin-top: 2rem;
-  width: 80%;
+  width: 75%;
 }
 @media only screen and (max-width: 980px) {
 	.app_content {
