@@ -95,6 +95,10 @@ export default {
             if(word.key.toLowerCase().search(this.searchedSentence.toLowerCase()) > -1 ||
               word.value.toLowerCase().search(this.searchedSentence.toLowerCase()) > -1) {
               this.results.push(word);
+            } else if(word.kanji !== undefined && word.kanji.length > 0) {
+              if(word.kanji.toLowerCase().search(this.searchedSentence.toLowerCase()) > -1) {
+                this.results.push(word);
+              }
             }
           });
         });
@@ -102,6 +106,7 @@ export default {
           this.notFound = true;
         } else {
           this.notFound = false;
+          this.results.sort((a, b) => a.value.toLowerCase().localeCompare(b.value.toLowerCase()));
         }
       }
     }
