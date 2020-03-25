@@ -7,7 +7,7 @@
         color="black">
         mdi-file-edit
       </v-icon>
-      Testy
+      Nauka
     </h1>
     TODO: implement...
   </div>

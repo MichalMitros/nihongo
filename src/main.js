@@ -2,7 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify';
-import { activeSets } from './data/kanji';
 
 Vue.config.productionTip = false
 

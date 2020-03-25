@@ -16,15 +16,18 @@
       color="primary">
       Kategorie
     </v-btn>
-    <div class="search_field">
+    <v-row class="search_field">
       <v-text-field
         outlined
         label="Szukana fraza"
-        append-icon="mdi-magnify"
         v-model="searchedSentence"
+        class="search"
         @keydown.enter="search">
       </v-text-field>
-    </div>
+      <v-btn icon x-large @click="search" class="search_btn">
+        <v-icon color="primary">mdi-magnify</v-icon>
+      </v-btn>
+    </v-row>
     <div v-if="results && results.length > 0">
       <h3>Ilość wyników wyszukiwania: {{ results.length }}</h3>
       <v-simple-table>
@@ -37,9 +40,9 @@
         </thead>
         <tbody>
           <tr v-for="(item, index) in results" :key="index">
-            <td>{{ item.key }}</td>
-            <td><div v-if="item.kanji">{{ item.kanji }}</div></td>
-            <td>
+            <td class="body-1">{{ item.key }}</td>
+            <td class="body-1"><div v-if="item.kanji">{{ item.kanji }}</div></td>
+            <td class="body-1">
               <span v-if="item.comment">
                 {{ item.comment }} 
               </span>
@@ -121,11 +124,14 @@ export default {
   margin-top: 2.5rem;
 }
 .search_btn {
-  margin-left: 1rem;
+  margin-left: 2rem;
+  margin-top: 0.25rem;
+}
+.search {
+  margin-right: 1rem;
 }
 .search_field {
   width: 100%;
-  margin: auto;
   margin-top: 1.5rem;
 }
 </style>

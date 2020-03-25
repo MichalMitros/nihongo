@@ -49,7 +49,7 @@
         <v-btn 
           class="btn" 
           x-large
-          to="/tests"
+          to="/learning"
           color="primary">
           <v-icon
             medium
@@ -57,7 +57,7 @@
             color="white">
             mdi-file-edit
           </v-icon>
-          Testy
+          Nauka
         </v-btn>
       </v-row>
     </v-col>

@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import Kanji from '../views/Kanji.vue'
 import Classifiers from '../views/Classifiers.vue'
 import Dictionary from '../views/Dictionary.vue'
-import Tests from '../views/Tests.vue'
+import Learning from '../views/Learning.vue'
 import Categories from '../views/Categories.vue'
 import Range from '../views/Range.vue'
 
@@ -32,9 +32,9 @@ const routes = [
     component: Dictionary
   },
   {
-    path: '/tests',
-    name: 'Tests',
-    component: Tests
+    path: '/learning',
+    name: 'Learning',
+    component: Learning
   },
   {
     path: '/categories',

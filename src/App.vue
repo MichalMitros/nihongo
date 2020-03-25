@@ -38,12 +38,12 @@
             <v-list-item-title>Słowniczek</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item to="tests" link>
+        <v-list-item to="learning" link>
           <v-list-item-action>
             <v-icon>mdi-file-edit</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Testy</v-list-item-title>
+            <v-list-item-title>Nauka</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>

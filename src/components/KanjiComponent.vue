@@ -14,17 +14,18 @@
         </thead>
         <tbody v-if="item.on.length > item.kun.length">
           <tr v-for="(reading, index2) in item.on" :key="index2">
-            <td>{{ reading }}</td>
-            <td><span v-if="index2 < item.kun.length">{{ item.kun[index2] }}</span></td>
+            <td class="body-1">{{ reading }}</td>
+            <td class="body-1"><span v-if="index2 < item.kun.length">{{ item.kun[index2] }}</span></td>
           </tr>
         </tbody>
         <tbody v-else>
           <tr v-for="(reading, index2) in item.kun" :key="index2">
-            <td><span v-if="index2 < item.on.length">{{ item.on[index2] }}</span></td>
-            <td>{{ reading }}</td>
+            <td class="body-1"><span v-if="index2 < item.on.length">{{ item.on[index2] }}</span></td>
+            <td class="body-1">{{ reading }}</td>
           </tr>
         </tbody>
       </v-simple-table>
+      TODO: finish
     </div>
   </v-container>
 </template>

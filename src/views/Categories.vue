@@ -93,6 +93,7 @@
     <div v-if="showIndex !== -1" class="mb-12">
         <!-- wszystkie -->
         <div v-if="showIndex === -2">
+            <h3 class="mb-4">Ilość słów w słowniku: {{ allWords.length }}</h3>
             <v-simple-table>
                 <thead>
                 <tr>
@@ -103,9 +104,9 @@
                 </thead>
                 <tbody>
                 <tr v-for="(item, index) in allWords" :key="index">
-                    <td>{{ item.key }}</td>
-                    <td><div v-if="item.kanji">{{ item.kanji }}</div></td>
-                    <td>
+                    <td class="body-1">{{ item.key }}</td>
+                    <td class="body-1"><div v-if="item.kanji">{{ item.kanji }}</div></td>
+                    <td class="body-1">
                     <span v-if="item.comment">
                         {{ item.comment }} 
                     </span>
@@ -121,6 +122,7 @@
         </div>
         <!-- czasowniki -->
         <div v-if="showIndex === 0">
+          <h3 class="mb-4">Ilość czasowników w słowniku: {{ dictionary[showIndex].length }}</h3>
             <v-simple-table>
                 <thead>
                 <tr>
@@ -130,8 +132,8 @@
                 </thead>
                 <tbody>
                 <tr v-for="(item, index) in dictionary[showIndex]" :key="index">
-                    <td>{{ item.key }}</td>
-                    <td>{{ item.value }}</td>
+                    <td class="body-1">{{ item.key }}</td>
+                    <td class="body-1">{{ item.value }}</td>
                 </tr>
                 </tbody>
             </v-simple-table>
@@ -148,9 +150,9 @@
                 </thead>
                 <tbody>
                 <tr v-for="(item, index) in dictionary[showIndex]" :key="index">
-                    <td>{{ item.key }}</td>
-                    <td><div v-if="item.kanji">{{ item.kanji }}</div></td>
-                    <td>{{ item.value }}</td>
+                    <td class="body-1">{{ item.key }}</td>
+                    <td class="body-1"><div v-if="item.kanji">{{ item.kanji }}</div></td>
+                    <td class="body-1">{{ item.value }}</td>
                 </tr>
                 </tbody>
             </v-simple-table>
@@ -167,9 +169,9 @@
                 </thead>
                 <tbody>
                 <tr v-for="(item, index) in dictionary[showIndex]" :key="index">
-                    <td>{{ item.key }}</td>
-                    <td><div v-if="item.kanji">{{ item.kanji }}</div></td>
-                    <td>{{ item.value }}</td>
+                    <td class="body-1">{{ item.key }}</td>
+                    <td class="body-1"><div v-if="item.kanji">{{ item.kanji }}</div></td>
+                    <td class="body-1">{{ item.value }}</td>
                 </tr>
                 </tbody>
             </v-simple-table>
@@ -186,9 +188,9 @@
                 </thead>
                 <tbody>
                 <tr v-for="(item, index) in dictionary[showIndex]" :key="index">
-                    <td>{{ item.key }}</td>
-                    <td><div v-if="item.kanji">{{ item.kanji }}</div></td>
-                    <td>{{ item.value }}</td>
+                    <td class="body-1">{{ item.key }}</td>
+                    <td class="body-1"><div v-if="item.kanji">{{ item.kanji }}</div></td>
+                    <td class="body-1">{{ item.value }}</td>
                 </tr>
                 </tbody>
             </v-simple-table>
@@ -205,9 +207,9 @@
                 </thead>
                 <tbody>
                 <tr v-for="(item, index) in dictionary[showIndex]" :key="index">
-                    <td>{{ item.key }}</td>
-                    <td><div v-if="item.kanji">{{ item.kanji }}</div></td>
-                    <td>{{ item.value }}</td>
+                    <td class="body-1">{{ item.key }}</td>
+                    <td class="body-1"><div v-if="item.kanji">{{ item.kanji }}</div></td>
+                    <td class="body-1">{{ item.value }}</td>
                 </tr>
                 </tbody>
             </v-simple-table>
@@ -224,9 +226,9 @@
                 </thead>
                 <tbody>
                 <tr v-for="(item, index) in dictionary[showIndex]" :key="index">
-                    <td>{{ item.key }}</td>
-                    <td><div v-if="item.kanji">{{ item.kanji }}</div></td>
-                    <td>{{ item.value }}</td>
+                    <td class="body-1">{{ item.key }}</td>
+                    <td class="body-1"><div v-if="item.kanji">{{ item.kanji }}</div></td>
+                    <td class="body-1">{{ item.value }}</td>
                 </tr>
                 </tbody>
             </v-simple-table>
@@ -242,8 +244,8 @@
                 </thead>
                 <tbody>
                 <tr v-for="(item, index) in dictionary[showIndex]" :key="index">
-                    <td>{{ item.key }}</td>
-                    <td>{{ item.value }}</td>
+                    <td class="body-1">{{ item.key }}</td>
+                    <td class="body-1">{{ item.value }}</td>
                 </tr>
                 </tbody>
             </v-simple-table>
@@ -260,9 +262,9 @@
                 </thead>
                 <tbody>
                 <tr v-for="(item, index) in dictionary[showIndex]" :key="index">
-                    <td>{{ item.key }}</td>
-                    <td><div v-if="item.kanji">{{ item.kanji }}</div></td>
-                    <td>{{ item.value }}</td>
+                    <td class="body-1">{{ item.key }}</td>
+                    <td class="body-1"><div v-if="item.kanji">{{ item.kanji }}</div></td>
+                    <td class="body-1">{{ item.value }}</td>
                 </tr>
                 </tbody>
             </v-simple-table>
@@ -279,9 +281,9 @@
                 </thead>
                 <tbody>
                 <tr v-for="(item, index) in family" :key="index">
-                    <td><b>{{ item.key }}</b></td>
-                    <td>{{ item.value1 }}</td>
-                    <td>{{ item.value2 }}</td>
+                    <td class="body-1"><b>{{ item.key }}</b></td>
+                    <td class="body-1">{{ item.value1 }}</td>
+                    <td class="body-1">{{ item.value2 }}</td>
                 </tr>
                 </tbody>
             </v-simple-table>

@@ -31,6 +31,18 @@
       <KanjiComponent v-if="showKanji"></KanjiComponent>
       <KanjiCompoundComponent v-if="showCompound"></KanjiCompoundComponent>
     </div>
+    <v-btn
+      fixed
+      dark
+      fab
+      bottom
+      right
+      color="pink"
+      v-if="showKanji"
+      @click="$vuetify.goTo(-9999, {duration: 750})"
+    >
+      <v-icon>mdi-chevron-up</v-icon>
+    </v-btn>
   </div>
 </template>
 
