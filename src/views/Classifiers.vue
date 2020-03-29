@@ -23,8 +23,8 @@
                 ></v-switch>
           <v-row>
             <v-col
-              v-for="item in classifiers"
-              :key="item.classifier"
+              v-for="(item, index) in classifiers"
+              :key="index"
               cols="12"
               sm="6"
               md="4"

@@ -473,6 +473,7 @@ const dictionary = [
         {key: "がくせい", value: "student", kanji: "学生"},
         {key: "にんげん", value: "człowiek, ludzkość", kanji: "人間"},
         {key: "はんぶん", value: "połowa", kanji: "半分"},
+        {key: "しり", value: "dupa", kanji: "尻"},
     ],
 ];
 

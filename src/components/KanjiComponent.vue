@@ -8,7 +8,7 @@
       <v-simple-table>
         <thead>
           <tr>
-            <th class="text-left">ON-YOMI</th>
+            <th class="text-left" width="50%">ON-YOMI</th>
             <th class="text-left">KUN-YOMI</th>
           </tr>
         </thead>
@@ -25,7 +25,7 @@
           </tr>
         </tbody>
       </v-simple-table>
-      TODO: finish
+      
     </div>
   </v-container>
 </template>
