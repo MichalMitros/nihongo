@@ -268,7 +268,6 @@ const dictionary = [
         {key: "キッチン", value: "kuchnia"},
         {key: "しょくどう", value: "stołówka"},
         {key: "プール", value: "basen"},
-        {key: "およぐ", value: "pływać"},
         {key: "にわ", value: "ogród"},
         {key: "りょうり", value: "potrawa, gotowanie"},
         {key: "はし", value: "pałeczki"},
