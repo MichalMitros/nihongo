@@ -2,32 +2,48 @@
   <v-container>
       <v-col>
         <div v-if="!showStartPage">
-          <v-card @click="active = !active" class="mb-4 flashCard" elevation="14">
+          <v-card @click="active = !active" class="mb-6 flashCard" elevation="14">
             <v-responsive :aspect-ratio="1/1">
-                <div v-if="!active" class="text-center flashcardContent display-4">
+                <div v-show="!active" class="text-center flashcardContent-kanji display-4">
                   <v-spacer></v-spacer>
-                    ABC
+                  <p></p>
+                  <p>{{ learningSet[currentSign].kanji }}</p>
                 </div>
-                <div v-else class="text-center flashcardContent display-4">
-                    DEF
+                <div v-show="active" class="text-center flashcardContent headline">
+                    <p v-for="(reading, index) in learningSet[currentSign].on" :key="index">
+                      {{ reading }}
+                    </p>
+                    <p v-for="(reading2) in learningSet[currentSign].kun" :key="reading2">
+                      {{ reading2 }}
+                    </p>
                 </div>
             </v-responsive>
           </v-card>
           <div class="d-flex justify-center">
               <v-spacer></v-spacer>
-              <v-btn text color="primary">Następne</v-btn>
+              <v-btn large text color="primary" @click="currentSign = currentSign === learningSet.length-1 ? 0 : currentSign+1, active = false">Następne</v-btn>
               <v-spacer></v-spacer>
           </div>
         </div>
         <div v-else>
-          <div class="mb-6">
+          <div class="mb-2">
+            <v-switch v-model="shuffle" label="Kolejność losowa"></v-switch>
+            <h3>Zakres:</h3>
+            <v-combobox
+              v-model="selectedSets"
+              :items="kanjiSets"
+              label="Wybierz zestaw do nauki"
+              multiple
+              clearable
+              open-on-clear
+            ></v-combobox>
             <span class="title">
               Wciśnij fiszkę, aby zobaczyć tłumaczenie.
             </span>
           </div>
           <div class="d-flex justify-center">
               <v-spacer></v-spacer>
-              <v-btn color="primary" @click="showStartPage = false">Start</v-btn>
+              <v-btn large :disabled="selectedSets.length === 0" color="primary" @click="start">Start</v-btn>
               <v-spacer></v-spacer>
           </div>
         </div>
@@ -42,11 +58,59 @@ export default {
   name: 'KanjiFlashcardsComponent',
 
   data: () => ({
-    kanji: kanji,
+    learningSet: [],
+    currentSign: 0,
     active: false,
-    showStartPage: true
+    showStartPage: true,
+    kanjiSets: [],
+    selectedSets: [],
+    shuffle: true
   }),
   mounted() {
+    let n = 1;
+    kanji.forEach(kanjiSet => {
+      this.kanjiSets.push("Kanji " + n);
+      this.selectedSets.push("Kanji " + n);
+      n++;
+    });
+    this.kanjiSets = this.kanjiSets.reverse();
+  },
+  methods: {
+    start() {
+      this.learningSet = [];
+      let indexes = [];
+      this.selectedSets.forEach(set => {
+        indexes.push(Number(set.slice(6))-1);
+        if(indexes[indexes.length-1] === undefined) {
+          this.selectedSets = [];
+          return;
+        }
+      });
+      
+      
+      for(let i=0; i<kanji.length; i++) {
+        if(indexes.includes(i)) {
+          
+          kanji[i].forEach(sign => {
+            this.learningSet.push(sign);
+          })
+        }
+      }
+
+      if(this.shuffle) {
+        this.shuffleLearningSet();
+      }
+
+      this.showStartPage = false;
+    },
+    shuffleLearningSet() {
+      for(let i=0; i<this.learningSet.length; i++) {
+        let n = Math.floor(Math.random() * this.learningSet.length);
+        let tmp = this.learningSet[i];
+        this.learningSet[i] = this.learningSet[n];
+        this.learningSet[n] = tmp;
+      }
+    }
   }
 }
 </script>
@@ -58,10 +122,17 @@ export default {
   padding: 0.5rem;
   height: 100%;
 }
+.flashcardContent-kanji {
+  text-align: center;
+  align-items: center;
+  padding: 0.5rem;
+  padding-top: 3rem;
+  height: 100%;
+}
 .flashCard {
   align-items: center;
   margin: auto;
-  width: 70%;
+  width: 50%;
 }
 @media only screen and (max-width: 720px) {
 	.flashCard {

@@ -19,12 +19,13 @@
           x-large
           @click="opt = 0, dialog = true"
           color="primary">
-          Fiszki
+          Fiszki (BETA)
         </v-btn>
         <v-btn 
           class="btn" 
           x-large
           @click="opt = 1, dialog = true"
+          disabled
           color="primary">
           Quiz
         </v-btn>
@@ -38,9 +39,9 @@
         <v-btn
           class="btn" 
           x-large
-          disabled
+          @click="opt = 2, dialog = true"
           color="primary">
-          Fiszki
+          Fiszki (BETA)
         </v-btn>
         <v-btn 
           class="btn" 
@@ -203,12 +204,14 @@
         <v-card-title class="headline grey lighten-2">
           <span v-if="opt == 0">Fiszki Kanji</span>
           <span v-if="opt == 1">Quiz Kanji</span>
+          <span v-if="opt == 2">Fiszki - Złożenia</span>
           <v-spacer></v-spacer>
           <v-btn @click="dialog=false, opt = -1" icon ><v-icon>mdi-close</v-icon></v-btn>
           </v-card-title>
         <v-card-text>
           <KanjiFlashcardsComponent v-if="opt == 0"></KanjiFlashcardsComponent>
           <KanjiQuizComponent v-if="opt == 1"></KanjiQuizComponent>
+          <KanjiCompoundsFlashcardsComponent v-if="opt == 2"></KanjiCompoundsFlashcardsComponent>
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -220,12 +223,14 @@
 <script>
 import KanjiFlashcardsComponent from "../components/KanjiFlashcardsComponent";
 import KanjiQuizComponent from "../components/KanjiQuizComponent";
+import KanjiCompoundsFlashcardsComponent from "../components/KanjiCompoundsFlashcardsComponent";
 
 export default {
   name: 'Learning',
   components: {
     KanjiFlashcardsComponent,
-    KanjiQuizComponent
+    KanjiQuizComponent,
+    KanjiCompoundsFlashcardsComponent
   },
   data: () => ({
     opt: 0,

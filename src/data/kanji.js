@@ -69,6 +69,10 @@ const kanji = [
 const activeSets = [1, 2, 3, 4, 5];
 
 const compounds = [
+    [],
+    [],
+    [],
+    [],
     [
         {part: 5, kanji: "東口", kana: "ひがしぐち", value: "Wschodnie wyjście"},
         {part: 5, kanji: "西口", kana: "にしぐち", value: "Zachodnie wyjście"},
