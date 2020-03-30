@@ -38,7 +38,7 @@
       bottom
       right
       color="pink"
-      v-if="showKanji"
+      v-if="showKanji || showCompound"
       @click="$vuetify.goTo(-9999, {duration: 750})"
     >
       <v-icon>mdi-chevron-up</v-icon>
