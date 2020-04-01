@@ -57,7 +57,7 @@
             color="white">
             mdi-file-edit
           </v-icon>
-          Nauka
+          Nauka <span class="overline">(BETA)</span>
         </v-btn>
       </v-row>
     </v-col>

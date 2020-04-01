@@ -7,7 +7,7 @@
         color="black">
         mdi-file-edit
       </v-icon>
-      Nauka
+      Nauka <span class="body-1">(BETA)</span>
     </h1>
     
     <h2 class="categoryDivider">Kanji</h2>
@@ -19,7 +19,7 @@
           x-large
           @click="opt = 0, dialog = true"
           color="primary">
-          Fiszki (BETA)
+          Fiszki
         </v-btn>
         <v-btn 
           class="btn" 
@@ -41,12 +41,12 @@
           x-large
           @click="opt = 2, dialog = true"
           color="primary">
-          Fiszki (BETA)
+          Fiszki
         </v-btn>
         <v-btn 
           class="btn" 
           x-large
-          disabled
+          @click="opt = 3, dialog = true"
           color="primary">
           Quiz
         </v-btn>
@@ -205,6 +205,7 @@
           <span v-if="opt == 0">Fiszki Kanji</span>
           <span v-if="opt == 1">Quiz Kanji</span>
           <span v-if="opt == 2">Fiszki - Złożenia</span>
+          <span v-if="opt == 3">Quiz - Złożenia</span>
           <v-spacer></v-spacer>
           <v-btn @click="dialog=false, opt = -1" icon ><v-icon>mdi-close</v-icon></v-btn>
           </v-card-title>
@@ -212,6 +213,7 @@
           <KanjiFlashcardsComponent v-if="opt == 0"></KanjiFlashcardsComponent>
           <KanjiQuizComponent v-if="opt == 1"></KanjiQuizComponent>
           <KanjiCompoundsFlashcardsComponent v-if="opt == 2"></KanjiCompoundsFlashcardsComponent>
+          <KanjiCompoundsQuizComponent v-if="opt == 3"></KanjiCompoundsQuizComponent>
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -224,13 +226,15 @@
 import KanjiFlashcardsComponent from "../components/KanjiFlashcardsComponent";
 import KanjiQuizComponent from "../components/KanjiQuizComponent";
 import KanjiCompoundsFlashcardsComponent from "../components/KanjiCompoundsFlashcardsComponent";
+import KanjiCompoundsQuizComponent from "../components/KanjiCompoundsQuizComponent";
 
 export default {
   name: 'Learning',
   components: {
     KanjiFlashcardsComponent,
     KanjiQuizComponent,
-    KanjiCompoundsFlashcardsComponent
+    KanjiCompoundsFlashcardsComponent,
+    KanjiCompoundsQuizComponent
   },
   data: () => ({
     opt: 0,

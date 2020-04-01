@@ -43,7 +43,7 @@
             <v-icon>mdi-file-edit</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Nauka</v-list-item-title>
+            <v-list-item-title>Nauka <span class="overline">(BETA)</span></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
