@@ -57,7 +57,6 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>日本語</v-toolbar-title>
-      
     </v-app-bar>
 
     <v-content class="app_content">
@@ -84,7 +83,7 @@ export default {
 
   data: () => ({
     drawer: !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)),
-  }),
+  })
 };
 </script>
 

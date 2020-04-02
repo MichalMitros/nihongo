@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <p><span class="title">Czas do JLPT: {{ time }}</span></p>
     <span class="title">Witaj! ^_^</span><br>
     <span class="title">Co dzisiaj robimy?</span>
 
@@ -65,11 +66,38 @@
 </template>
 
 <script>
+import moment from "moment";
 
 export default {
   name: 'Home',
   components: {
   },
+  data: () => ({
+    time: '',
+    isTimerRunning: false
+  }),
+  mounted() {
+    if(!this.isTimerRunning) {
+      this.isTimerRunning = true;
+      this.refreshTime();
+      setInterval(() => {
+        this.refreshTime();
+      }, 1000);
+    }
+  },
+  methods: {
+    refreshTime() {
+      let t = Math.floor(moment('2020-07-05 12:00').diff(moment()) / 1000);
+      let days = Math.floor(t / 86400) + "";
+      t = t % 86400;
+      let hours = Math.floor(t / 3600) + "";
+      t = t % 3600;
+      let minutes = Math.floor((t / 60) % 60) + "";
+      let seconds = Math.floor(t % 60) + "";
+      
+      this.time = days + "d " + hours + "g " + minutes + "m " + seconds + "s";
+    }
+  }
 }
 </script>
 
