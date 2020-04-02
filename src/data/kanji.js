@@ -1,3 +1,21 @@
+/*
+    Kanji element's template:
+    {
+        part: number, (optional)
+        kanji: string,
+        on: Array<string>,
+        kun: Array<string>
+    }
+    
+    Kanji compound element's template:
+    {
+        part: number, (optional)
+        kanji: string,
+        kana: string,
+        value: string (translation)
+    }
+*/
+
 const kanji = [
     [
         {part: 1, kanji: "人", on: ["ジン", "ニン klasyfikator osób"], kun: ["ひと człowiek"]},
