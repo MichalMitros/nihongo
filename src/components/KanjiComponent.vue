@@ -49,6 +49,24 @@
           </div>
         </v-expansion-panel-content>
       </v-expansion-panel>
+      <v-expansion-panel disabled>
+        <v-expansion-panel-header>
+          <v-row no-gutters>
+            <v-col cols="4"><b>Kanji 7</b></v-col>
+            <v-col
+              cols="8"
+              class="text--secondary"
+            >
+              <v-fade-transition leave-absolute>
+                <span >毎, 何, 牛...</span>
+
+              </v-fade-transition>
+            </v-col>
+          </v-row>
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
     </v-expansion-panels>
 
     <!-- <div v-for="(item, index) in kanji" :key="index">

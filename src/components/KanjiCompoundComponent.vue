@@ -41,6 +41,24 @@
           </v-simple-table>
         </v-expansion-panel-content>
       </v-expansion-panel>
+      <v-expansion-panel disabled>
+        <v-expansion-panel-header>
+          <v-row no-gutters>
+            <v-col cols="4"><b>Kanji 7</b></v-col>
+            <v-col
+              cols="8"
+              class="text--secondary"
+            >
+              <v-fade-transition leave-absolute>
+                <span>毎日, 毎週...</span>
+
+              </v-fade-transition>
+            </v-col>
+          </v-row>
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
     </v-expansion-panels>
   </v-container>
 </template>
