@@ -111,6 +111,26 @@ const compounds = [
         {part: 5, kanji: "今月", kana: "こんげつ", value: "W tym miesiącu"},
         {part: 5, kanji: "今年", kana: "ことし", value: "W tym roku"},
     ],
+    [
+        {part: 6, kanji: "お父さん", kana: "おとうさん", value: "Tata"},
+        {part: 6, kanji: "お母さん", kana: "おかあさん", value: "Mama"},
+        {part: 6, kanji: "お兄さん", kana: "おにいさん", value: "Starszy brat"},
+        {part: 6, kanji: "弟さん", kana: "おとうとさん", value: "Młodszy brat"},
+        {part: 6, kanji: "兄弟", kana: "きょうだい", value: "Rodzeństwo, bracia"},
+        {part: 6, kanji: "先生", kana: "せんせい", value: "Nauczyciel"},
+        {part: 6, kanji: "先週", kana: "せんしゅう", value: "Zeszły tydzień"},
+        {part: 6, kanji: "先月", kana: "せんげつ", value: "Zeszły miesiąc"},
+        {part: 6, kanji: "学生", kana: "がくせい", value: "Student"},
+        {part: 6, kanji: "中学生", kana: "ちゅうがくせい", value: "Gimnazjalista"},
+        {part: 6, kanji: "一年生", kana: "いちねんせい", value: "Student pierwszego roku"},
+        {part: 6, kanji: "一生", kana: "いっしょう", value: "Całe życie"},
+        {part: 6, kanji: "人生", kana: "じんせい", value: "Życie"},
+        {part: 6, kanji: "学校", kana: "がっこう", value: "SZkoła"},
+        {part: 6, kanji: "中学校", kana: "ちゅうがっこう", value: "Gimnazjum"},
+        {part: 6, kanji: "友達、友だち", kana: "ともだち", value: "Kolega, koleżanka"},
+        {part: 6, kanji: "友人", kana: "ゆうじん", value: "Przyjaciel, przyjaciółka"},
+        {part: 6, kanji: "名前", kana: "なまえ", value: "Imię"},
+    ]
 ];
 
 module.exports.kanji = kanji;
