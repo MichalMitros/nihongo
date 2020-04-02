@@ -1,3 +1,13 @@
+/*
+    Word's teplate:
+    {
+        key: string, <- hiragana/katakana
+        value: string, <- translation
+        kanji: string, <- kanji/compound for this word (completely optional)
+        comment: string <- used for special categories (family etc), required in some categories
+    }
+*/
+
 const dictionary = [
     // czasowniki
     [
