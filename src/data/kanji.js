@@ -63,6 +63,18 @@ const kanji = [
         {part: 5, kanji: "子", on:["*シ"], kun: ["こ dziecko"]},
         {part: 5, kanji: "力", on:["リョク", "*リキ"], kun: ["ちから siła"]},
         {part: 5, kanji: "今", on:["コン"], kun: ["いま teraz"]},
+    ],
+    [
+        {part: 6, kanji: "父", on:["*フ"], kun: ["ちち tata"]},
+        {part: 6, kanji: "母", on:["*ボ"], kun: ["はは mama"]},
+        {part: 6, kanji: "兄", on:["キョウ"], kun: ["あに starszy brat"]},
+        {part: 6, kanji: "弟", on:["ダイ、*デ"], kun: ["おとうと młodszy brat"]},
+        {part: 6, kanji: "先", on:["セン"], kun: ["さき przód, przed, wcześniej"]},
+        {part: 6, kanji: "生", on:["セイ", "ショウ"], kun: ["い・きる żyć", "う・まれる urodzić się"]},
+        {part: 6, kanji: "学", on:["ガク"], kun: ["まな・ぶ uczyć się"]},
+        {part: 6, kanji: "校", on:["コウ"], kun: ["(szkoła)"]},
+        {part: 6, kanji: "友", on:["ユウ"], kun: ["とも przyjaciel"]},
+        {part: 6, kanji: "名", on:["*メイ"], kun: ["な imię"]},
     ]
 ];
 
