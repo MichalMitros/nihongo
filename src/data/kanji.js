@@ -99,10 +99,15 @@ const kanji = [
 const activeSets = [1, 2, 3, 4, 5];
 
 const compounds = [
+    // Kanji 1
     [],
+    // Kanji 2
     [],
+    // Kanji 3
     [],
+    // Kanji 4
     [],
+    // Kanji 5
     [
         {part: 5, kanji: "東口", kana: "ひがしぐち", value: "Wschodnie wyjście"},
         {part: 5, kanji: "西口", kana: "にしぐち", value: "Zachodnie wyjście"},
@@ -129,6 +134,7 @@ const compounds = [
         {part: 5, kanji: "今月", kana: "こんげつ", value: "W tym miesiącu"},
         {part: 5, kanji: "今年", kana: "ことし", value: "W tym roku"},
     ],
+    // Kanji 6
     [
         {part: 6, kanji: "お父さん", kana: "おとうさん", value: "Tata"},
         {part: 6, kanji: "お母さん", kana: "おかあさん", value: "Mama"},
