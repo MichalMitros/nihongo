@@ -21,14 +21,14 @@
           color="primary">
           Fiszki
         </v-btn>
-        <v-btn 
+        <!-- <v-btn 
           class="btn" 
           x-large
           @click="opt = 1, dialog = true"
           disabled
           color="primary">
           Quiz
-        </v-btn>
+        </v-btn> -->
       </v-row>
     </v-col>
 
@@ -62,7 +62,7 @@
         <v-btn
           class="btn" 
           x-large
-          disabled
+          @click="opt = 4, dialog = true"
           color="primary">
           Fiszki
         </v-btn>
@@ -83,7 +83,7 @@
         <v-btn
           class="btn" 
           x-large
-          disabled
+          @click="opt = 6, dialog = true"
           color="primary">
           Fiszki (wszystkie)
         </v-btn>
@@ -99,7 +99,7 @@
         <v-btn
           class="btn" 
           x-large
-          disabled
+          @click="opt = 8, dialog = true"
           color="primary">
           Fiszki (い-przymiotniki)
         </v-btn>
@@ -115,7 +115,7 @@
         <v-btn
           class="btn" 
           x-large
-          disabled
+          @click="opt = 10, dialog = true"
           color="primary">
           Fiszki (な-przymiotniki)
         </v-btn>
@@ -136,7 +136,7 @@
         <v-btn
           class="btn" 
           x-large
-          disabled
+          @click="opt = 12, dialog = true"
           color="primary">
           Fiszki
         </v-btn>
@@ -157,7 +157,7 @@
         <v-btn
           class="btn" 
           x-large
-          disabled
+          @click="opt = 14, dialog = true"
           color="primary">
           Fiszki
         </v-btn>
@@ -206,6 +206,12 @@
           <span v-if="opt == 1">Quiz Kanji</span>
           <span v-if="opt == 2">Fiszki - Złożenia</span>
           <span v-if="opt == 3">Quiz - Złożenia</span>
+          <span v-if="opt == 4">Fiszki - czasowniki</span>
+          <span v-if="opt == 6">Fiszki - przymiotniki</span>
+          <span v-if="opt == 8">Fiszki - い-przym.</span>
+          <span v-if="opt == 10">Fiszki - な-przym.</span>
+          <span v-if="opt == 12">Fiszki - czas/częstot.</span>
+          <span v-if="opt == 14">Fiszki - słownictwo</span>
           <v-spacer></v-spacer>
           <v-btn @click="dialog=false, opt = -1" icon ><v-icon>mdi-close</v-icon></v-btn>
           </v-card-title>
@@ -214,6 +220,12 @@
           <KanjiQuizComponent v-if="opt == 1"></KanjiQuizComponent>
           <KanjiCompoundsFlashcardsComponent v-if="opt == 2"></KanjiCompoundsFlashcardsComponent>
           <KanjiCompoundsQuizComponent v-if="opt == 3"></KanjiCompoundsQuizComponent>
+          <WordsFlashcardsComponent v-if="opt == 4" categories="[0]"></WordsFlashcardsComponent>
+          <WordsFlashcardsComponent v-if="opt == 6" categories="[1, 2]"></WordsFlashcardsComponent>
+          <WordsFlashcardsComponent v-if="opt == 8" categories="[1]"></WordsFlashcardsComponent>
+          <WordsFlashcardsComponent v-if="opt == 10" categories="[2]"></WordsFlashcardsComponent>
+          <WordsFlashcardsComponent v-if="opt == 12" categories="[3]"></WordsFlashcardsComponent>
+          <WordsFlashcardsComponent v-if="opt == 14"></WordsFlashcardsComponent>
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -227,6 +239,7 @@ import KanjiFlashcardsComponent from "../components/KanjiFlashcardsComponent";
 import KanjiQuizComponent from "../components/KanjiQuizComponent";
 import KanjiCompoundsFlashcardsComponent from "../components/KanjiCompoundsFlashcardsComponent";
 import KanjiCompoundsQuizComponent from "../components/KanjiCompoundsQuizComponent";
+import WordsFlashcardsComponent from "../components/WordsFlashcardsComponent";
 
 export default {
   name: 'Learning',
@@ -234,7 +247,8 @@ export default {
     KanjiFlashcardsComponent,
     KanjiQuizComponent,
     KanjiCompoundsFlashcardsComponent,
-    KanjiCompoundsQuizComponent
+    KanjiCompoundsQuizComponent,
+    WordsFlashcardsComponent
   },
   data: () => ({
     opt: 0,
