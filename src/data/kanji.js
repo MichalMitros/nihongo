@@ -188,9 +188,9 @@ const compounds = [
         {part: 3, kanji: "三週間", kana: "さんじゅうかん", value: "Trzy tygodnie"},
         {part: 3, kanji: "一時間", kana: "いちじかん", value: "Jedna godzina"},
         {part: 3, kanji: "二時間", kana: "にじかん", value: "Dwie godziny"},
-        {part: 3, kanji: "三時間", kana: "さんぼん", value: "Trzy godziny"},
-        {part: 3, kanji: "時間", kana: "さんぼん", value: "Czas, godzina"},
-        {part: 3, kanji: "人間", kana: "さんぼん", value: "Człowiek, ludzkość"},
+        {part: 3, kanji: "三時間", kana: "さんじかん", value: "Trzy godziny"},
+        {part: 3, kanji: "時間", kana: "じかん", value: "Czas, godzina"},
+        {part: 3, kanji: "人間", kana: "にんげん", value: "Człowiek, ludzkość"},
     ],
     // Kanji 4
     [
