@@ -44,7 +44,7 @@
       <v-expansion-panel disabled>
         <v-expansion-panel-header>
           <v-row no-gutters>
-            <v-col cols="4"><b>Kanji 7</b></v-col>
+            <v-col cols="4"><b>Kanji 8</b></v-col>
             <v-col
               cols="8"
               class="text--secondary"
