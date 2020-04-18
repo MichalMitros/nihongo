@@ -93,6 +93,18 @@ const kanji = [
         {part: 6, kanji: "校", on:["コウ"], kun: ["(szkoła)"]},
         {part: 6, kanji: "友", on:["ユウ"], kun: ["とも przyjaciel"]},
         {part: 6, kanji: "名", on:["*メイ"], kun: ["な imię"]},
+    ],
+    [
+        {part: 7, kanji: "毎", on:["マイ"], kun: ["(każdy)"]},
+        {part: 7, kanji: "何", on:["ナニ、ナン co, który"], kun: []},
+        {part: 7, kanji: "牛", on:["*ギュウ"], kun: ["うし krowa"]},
+        {part: 7, kanji: "馬", on:["バ、*マ"], kun: ["うま koń"]},
+        {part: 7, kanji: "魚", on:["キョ"], kun: ["さかな ryba"]},
+        {part: 7, kanji: "貝", on:[], kun: ["かい muszla, małża"]},
+        {part: 7, kanji: "雨", on:["*ウ"], kun: ["あめ deszcz"]},
+        {part: 7, kanji: "天", on:["テン"], kun: ["(niebo)"]},
+        {part: 7, kanji: "気", on:["キ duch, energia", "*ケ"], kun: []},
+        {part: 7, kanji: "車", on:["シャ"], kun: ["くるま samochód"]},
     ]
 ];
 
@@ -255,11 +267,30 @@ const compounds = [
         {part: 6, kanji: "一年生", kana: "いちねんせい", value: "Student pierwszego roku"},
         {part: 6, kanji: "一生", kana: "いっしょう", value: "Całe życie"},
         {part: 6, kanji: "人生", kana: "じんせい", value: "Życie"},
-        {part: 6, kanji: "学校", kana: "がっこう", value: "SZkoła"},
+        {part: 6, kanji: "学校", kana: "がっこう", value: "Szkoła"},
         {part: 6, kanji: "中学校", kana: "ちゅうがっこう", value: "Gimnazjum"},
         {part: 6, kanji: "友達、友だち", kana: "ともだち", value: "Kolega, koleżanka"},
         {part: 6, kanji: "友人", kana: "ゆうじん", value: "Przyjaciel, przyjaciółka"},
         {part: 6, kanji: "名前", kana: "なまえ", value: "Imię"},
+    ],
+    // Kanji 7
+    [
+        {part: 7, kanji: "毎日", kana: "まいにち", value: "Codziennie"},
+        {part: 7, kanji: "毎週", kana: "まいしゅう", value: "Co tydzień"},
+        {part: 7, kanji: "毎月", kana: "まいつき, まいげつ", value: "Co miesiąc"},
+        {part: 7, kanji: "毎年", kana: "まいとし, まいねん", value: "Co rok"},
+        {part: 7, kanji: "何人", kana: "なにじん", value: "Jakiej narodowości"},
+        {part: 7, kanji: "何人", kana: "なんにん", value: "Ile osób"},
+        {part: 7, kanji: "何時", kana: "なんじ", value: "Która godzina"},
+        {part: 7, kanji: "何分", kana: "なんぷん", value: "Ile minut"},
+        {part: 7, kanji: "何か", kana: "なにか, なんか", value: "Coś"},
+        {part: 7, kanji: "何も", kana: "なにも", value: "Nic"},
+        {part: 7, kanji: "人魚", kana: "にんぎょ", value: "Syrena"},
+        {part: 7, kanji: "金魚", kana: "きんぎょ", value: "Złota rybka"},
+        {part: 7, kanji: "天気", kana: "てんき", value: "Pogoda"},
+        {part: 7, kanji: "人気", kana: "にんき", value: "Popularność"},
+        {part: 7, kanji: "気分", kana: "きぶん", value: "Samopoczucie"},
+        {part: 7, kanji: "馬車", kana: "ばしゃ", value: "Dorożka, wóz"},
     ]
 ];
 

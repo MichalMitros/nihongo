@@ -88,6 +88,15 @@
           Rodzina
         </v-btn>
       </v-row>
+      <v-row>
+        <v-btn 
+          class="btn" 
+          x-large
+          @click="showIndex = 10; $vuetify.goTo('#res', {duration: 750})"
+          color="primary">
+          Części ciała
+        </v-btn>
+      </v-row>
     </v-col>
     <div id="res"></div>
     <div v-if="showIndex !== -1" class="mb-12">
@@ -284,6 +293,25 @@
                     <td class="body-1"><b>{{ item.key }}</b></td>
                     <td class="body-1">{{ item.value1 }}</td>
                     <td class="body-1">{{ item.value2 }}</td>
+                </tr>
+                </tbody>
+            </v-simple-table>
+        </div>
+        <!-- części ciała -->
+        <div v-if="showIndex === 10">
+            <v-simple-table>
+                <thead>
+                <tr>
+                    <th class="text-left">Kana</th>
+                    <th class="text-left">Kanji</th>
+                    <th class="text-left">Tłumaczenie</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="(item, index) in dictionary[showIndex]" :key="index">
+                    <td class="body-1">{{ item.key }}</td>
+                    <td class="body-1"><div v-if="item.kanji">{{ item.kanji }}</div></td>
+                    <td class="body-1">{{ item.value }}</td>
                 </tr>
                 </tbody>
             </v-simple-table>

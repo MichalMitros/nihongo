@@ -50,7 +50,7 @@
               class="text--secondary"
             >
               <v-fade-transition leave-absolute>
-                <span>毎日, 毎週...</span>
+                <span>東京駅, 電気...</span>
 
               </v-fade-transition>
             </v-col>

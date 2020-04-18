@@ -52,13 +52,13 @@
       <v-expansion-panel disabled>
         <v-expansion-panel-header>
           <v-row no-gutters>
-            <v-col cols="4"><b>Kanji 7</b></v-col>
+            <v-col cols="4"><b>Kanji 8</b></v-col>
             <v-col
               cols="8"
               class="text--secondary"
             >
               <v-fade-transition leave-absolute>
-                <span >毎, 何, 牛...</span>
+                <span >電, 国, 駅...</span>
 
               </v-fade-transition>
             </v-col>

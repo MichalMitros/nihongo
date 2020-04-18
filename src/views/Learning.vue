@@ -150,6 +150,27 @@
       </v-row>
     </v-col>
 
+    <h2 class="categoryDivider">Części ciała</h2>
+
+    <v-col class="col">
+      <v-row class="row">
+        <v-btn
+          class="btn" 
+          x-large
+          @click="opt = 16, dialog = true"
+          color="primary">
+          Fiszki
+        </v-btn>
+        <v-btn 
+          class="btn" 
+          x-large
+          disabled
+          color="primary">
+          Quiz
+        </v-btn>
+      </v-row>
+    </v-col>
+
     <h2 class="categoryDivider">Słownictwo - wszystkie kategorie</h2>
 
     <v-col class="col">
@@ -211,6 +232,7 @@
           <span v-if="opt == 8">Fiszki - い-przym.</span>
           <span v-if="opt == 10">Fiszki - な-przym.</span>
           <span v-if="opt == 12">Fiszki - czas/częstot.</span>
+          <span v-if="opt == 16">Fiszki - części ciała</span>
           <span v-if="opt == 14">Fiszki - słownictwo</span>
           <v-spacer></v-spacer>
           <v-btn @click="dialog=false, opt = -1" icon ><v-icon>mdi-close</v-icon></v-btn>
@@ -220,11 +242,12 @@
           <KanjiQuizComponent v-if="opt == 1"></KanjiQuizComponent>
           <KanjiCompoundsFlashcardsComponent v-if="opt == 2"></KanjiCompoundsFlashcardsComponent>
           <KanjiCompoundsQuizComponent v-if="opt == 3"></KanjiCompoundsQuizComponent>
-          <WordsFlashcardsComponent v-if="opt == 4" categories="[0]"></WordsFlashcardsComponent>
-          <WordsFlashcardsComponent v-if="opt == 6" categories="[1, 2]"></WordsFlashcardsComponent>
-          <WordsFlashcardsComponent v-if="opt == 8" categories="[1]"></WordsFlashcardsComponent>
-          <WordsFlashcardsComponent v-if="opt == 10" categories="[2]"></WordsFlashcardsComponent>
-          <WordsFlashcardsComponent v-if="opt == 12" categories="[3]"></WordsFlashcardsComponent>
+          <WordsFlashcardsComponent v-if="opt == 4" v-bind:categories="[0]"></WordsFlashcardsComponent>
+          <WordsFlashcardsComponent v-if="opt == 6" v-bind:categories="[1, 2]"></WordsFlashcardsComponent>
+          <WordsFlashcardsComponent v-if="opt == 8" v-bind:categories="[1]"></WordsFlashcardsComponent>
+          <WordsFlashcardsComponent v-if="opt == 10" v-bind:categories="[2]"></WordsFlashcardsComponent>
+          <WordsFlashcardsComponent v-if="opt == 12" v-bind:categories="[3]"></WordsFlashcardsComponent>
+          <WordsFlashcardsComponent v-if="opt == 16" v-bind:categories="[10]"></WordsFlashcardsComponent>
           <WordsFlashcardsComponent v-if="opt == 14"></WordsFlashcardsComponent>
         </v-card-text>
       </v-card>
